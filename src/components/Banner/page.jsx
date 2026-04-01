@@ -31,9 +31,7 @@ const Banner = () => {
           <div className="flex-1 w-full relative pl-8">
             <div className="absolute inset-0 bg-primary blur-[100px] rounded-full opacity-30 translate-x-12 translate-y-12"></div>
             <img 
-              src="./public/banner.png" 
-              alt="Digital interface display" 
-              className="relative rounded-3xl shadow-2xl h-[590px] w-full object-cover aspect-square md:aspect-3/4"
+              src="/public/banner.png" className="relative rounded-3xl shadow-2xl h-[590px] w-full object-cover aspect-square md:aspect-3/4"
             />
           </div>  
         </div>
