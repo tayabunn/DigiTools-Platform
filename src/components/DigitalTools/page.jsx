@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import Cart from "../Cart/page";
 
 const products = [
@@ -70,6 +71,9 @@ const DigitalTools = ({ cartItems, setCartItems }) => {
   const handleAddToCart = (product) => {
     if (!cartItems.find(item => item.id === product.id)) {
       setCartItems([...cartItems, product]);
+      toast.success(`${product.name} added to cart!`);
+    } else {
+      toast.info(`${product.name} is already in your cart.`);
     }
   };
 

@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   return (
     <>
       <div className="navbar bg-base-100 shadow-sm">
@@ -36,9 +36,12 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end gap-2">
-            <button className="btn btn-ghost btn-circle">
-              <ShoppingCart className="w-5 h-5" />
-            </button>
+            <div className="indicator">
+              {cartCount > 0 && <span className="indicator-item badge badge-primary font-bold text-xs">{cartCount}</span>}
+              <button className="btn btn-ghost btn-circle">
+                <ShoppingCart className="w-5 h-5" />
+              </button>
+            </div>
             <a className="btn btn-ghost font-bold hidden md:inline-flex">Log in</a>
             <a className="btn btn-primary rounded-full px-6 font-bold hidden sm:inline-flex">
               Get Started
